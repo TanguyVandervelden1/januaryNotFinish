@@ -1,0 +1,22 @@
+
+@baseUrl = http://localhost:3000
+
+###
+POST {{baseUrl}}/purchases
+Content-Type: application/json
+
+{
+    "pseudo": "user1",
+    "id": 2,
+    "quantity": 4
+}
+
+### Enregistrer achats sans user
+POST {{baseUrl}}/purchases
+Content-Type: application/json
+
+{
+    "user": "",
+    "idProduit": 1,
+    "quantite": 10
+}
